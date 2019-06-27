@@ -1,0 +1,427 @@
+html {font-size: 10.667px; line-height: 10.667px;}
+body {
+	font-family:  16px "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
+	line-height:18px;
+	color:#666666;
+	margin:0;
+    padding:0;
+	background: #eff2f9;
+}
+br	{
+	letter-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:1em;
+}
+h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
+	margin:0;
+	padding:0;
+}
+li {list-style: none;}
+a {text-decoration: none; color: black;}
+em, i {font-style: normal;}
+
+
+/* common module */
+
+
+main ul > li > a > span {font-size: 1.3rem; line-height: 1.7rem;font-weight: 500;}
+.wrap {position: relative; width: 100%; text-overflow: ellipsis}
+ul li {float: left; font-size: 1.3rem;}
+ul::after{content: ''; clear: both; display: block;}
+h3 > * {display: block;}
+
+.content > .inner {width: calc(100% + 3px); height: calc(100% + 3px); margin-left: -1px;}
+.content > .inner > ul > li {
+	position: relative; 
+	width: 33.3333%;
+	padding: 0 2px 3px 1px; 
+	box-sizing: border-box;
+	overflow: hidden;
+}
+input[type="text"] { /* []로 지정 선택 */
+	border: none;
+	border-left: 1px solid #edeef2;
+	height: 22px;
+	width: 100%;
+	padding-left: 14px;
+	font-size: 16px;
+	color:#c7cad1;
+	font-weight: 400;
+}
+
+.ad_pagenav {text-align: center; padding:14px 0 18px;}
+.ad_pagenav .ad {float: left;}
+.ad_pagenav .ad > img {padding-top: 7px;}
+.ad_pagenav .pagenav > a > * {vertical-align: middle;}
+.ad_pagenav .pagenav > a:hover{cursor: default;}
+.ad_pagenav .pagenav > span {
+	min-width: 60px;
+	font-size: 1.3rem;
+	line-height: 34px;
+	display: inline-block;	
+}
+.font_size {padding: 8px 15px; border-bottom: 1px solid #e3e7ee; overflow: hidden;}
+.font_size > a {float: left;}
+.font_size > .size_down {margin-right: -1px;}
+.font_size > .topbt {float: right;}
+
+.hiddensch {width: 100%;
+	height: 100%;
+	background: #eff2f9;
+	overflow: hidden; display:none; 
+	position: fixed; 
+	top: 0; 
+	right: 0; 
+	left: 0; 
+	bottom: 0; 
+	z-index: 10;
+}
+.hiddensch > .in_sch {background: #fff}
+.hiddensch > .in_sch > .input_sch {overflow: hidden; position: relative; height: 54px; box-sizing: border-box}
+.hiddensch > .in_sch > .input_sch > .navmain > a{position: absolute; top: 0; left: 0;}
+.hiddensch > .in_sch > .input_sch > .inpw {padding:15px 0; margin:0 54px; }
+.hiddensch > .in_sch > .input_sch > .inpw > input {line-height: 54px;}
+.hiddensch > .in_sch > .input_sch > .finder {position: absolute; top: 0; right: 0;}
+.hiddensch > .in_sch > .sch_list {min-height: 153px;}
+.hiddensch > .in_sch > .sch_list > div {
+	padding: 54px 0; 
+	text-align: center; 
+	border-top:1px solid #0bde8b;
+	line-height: 29px;
+	font-size: 1.5rem;
+}
+.hiddensch > .in_sch > .sch_list > div > strong {display: block;}
+.hiddensch > .in_sch > .sch_list > div > i > a {color: #00c73c; text-decoration: underline;}
+.hiddensch > .in_sch > .sch_footer {
+	width: 100%;
+	border-top: 1px solid #ecf0f2;
+	font-size: 1.6rem;
+}
+.hiddensch > .in_sch > .sch_footer > div {
+	overflow: hidden;
+	height: 45px;
+	line-height: 45px;
+	margin:0 10px;
+}
+.hiddensch > .in_sch > .sch_footer > div > * {float: left; padding: 0 7px; margin: 0 1px; color: #8f8f8f; font-size: 1.5rem}
+.hiddensch > .in_sch > .sch_footer > div > a:first-child::after{border-right: 1px solid #e2e5e8; height: 13px; content: ''; display: inline-block; margin-left: 7px;}
+.hiddensch > .in_sch > .sch_footer > div > .close {float:right;}
+
+header {position: fixed;  top: 0; width: 100%; box-sizing: border-box; z-index: 5;}
+header > .sch {position: relative; padding-left: 54px;}
+header > .sch > h1 > a > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 54px; 
+	height: 60px;
+} 
+header > .sch > .in_sch > .input_sch{
+	height: 22px;
+	padding: 19px 0 19px 0;
+	margin-right: 124px;
+	background: white;
+}
+header > .sch > ul {position: absolute; top: 0; right: 0; width: 124px; background: white;}
+header > .sch > ul > li {
+	width: 40px;
+	height: 60px;
+}
+header > nav {padding-right: 39px; box-sizing: border-box; overflow: hidden; }
+header > nav > div{
+	position: relative;
+	height: 50px;
+	border-top: 1px solid #09b75d;
+	border-bottom: 1px solid #09b75d;
+	background: #00bf5f;
+	padding:0 16px 0 18px;
+	width: 100%;
+	overflow: hidden;
+}
+header > nav > div > ul {box-sizing: border-box; width: 100%; line-height: 50px; } 
+header > nav > div > ul > li {}
+header > nav > div > ul > li + li {margin-left: 2.734375%;} /* 21/768*100 */
+header > nav > div > ul > li > a {color: #bfebd5; font-size: 16px; line-height: 18px; font-weight: 500; }
+/* naver shopping start */
+/* header start */
+
+
+header > nav > div > a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 33px;
+	height: 50px;
+	padding-right: 6px;
+}
+
+/* header end */
+
+/* aside start */
+
+aside {margin-top: 112px; overflow: hidden;}
+aside .td_nav{
+	background: #ffffff;
+	overflow: hidden;
+}
+aside .td_nav > div {
+	padding: 0 15px;
+	border-bottom: 1px solid rgba(0,0,0,.07);
+	overflow: hidden;
+}
+aside .td_nav > div > h3 {float: left; padding: 16px 0 14px; font-size: 1.3rem; font-weight: 500;  overflow: hidden;} /* 233.033/375*100 */
+aside .td_nav > div > ul {margin-right: -8px; overflow: hidden; float: right; }
+aside .td_nav > div > ul > li {line-height: 50px; }
+aside .td_nav > div > ul > li::after {
+	content: '';
+	border-right: 1px solid #e3e3e3;
+	vertical-align: top;
+	height: 12px;
+	font-size: 0.9rem
+}
+aside .td_nav > div > ul > li:last-child::after{display: none;}
+aside .td_nav > div > ul > li > a{color: #7d8091; padding:0 8px 0 12px;}
+aside .td_nav > div > ul > li > a:active {color:#7a51e3;}
+aside .login{ 
+	font-size: 15px;
+	line-height: 28px;
+	box-sizing: border-box;
+}
+
+aside .login > div{
+	overflow: hidden; 
+	padding: 10px 15px; 
+	background: #ffffff;
+}
+aside .login > div > div {overflow: hidden; float: left;}
+aside .login > div > div > img{margin-right: 6px;}
+aside .login > div > div > i {color:#03cf5d; }
+aside .login > div > a {
+	float: right; 
+	padding: 0 8px; 
+	margin: 0 0 0 10px; 
+	border: 1px solid #03cf5d; 
+	border-radius: 2px;
+	color: #03cf5d; 
+	font-weight:700;
+}
+
+/* aside end */
+
+/* main start */
+main {font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;}
+main ul > li > a > img{width: 100%;  float: left;}
+main .now_td {background: white; padding: 0 13px 9px 14px; margin:10px 0 10px;}
+main .now_td > h3 {height: 50px; padding: 14px 0 11px;}
+main .now_td > h3 > strong {font-size: 24px; color: #131313; line-height: 28px; font-weight: 700;}
+main .now_td > h3 > span {font-size: 1.4rem; line-height: 1.8rem; font-weight: 500;}
+main .now_td .content > .inner > ul {margin-bottom: 9px;}
+main .now_td .content > .inner > ul > li:first-child{width: 66.66%;}
+main .now_td .content > .inner > ul > li:first-child > a > img {border-top-left-radius: 10px;}
+main .now_td .content > .inner > ul > li:nth-child(2) > a > img {border-top-right-radius: 10px;}
+main .now_td .content > .inner > ul > li:nth-child(4) > a > img {border-bottom-left-radius: 10px;}
+main .now_td .content > .inner > ul > li:last-child > a > img {border-bottom-right-radius: 10px;}
+main .now_td .content > .inner > ul > li > a { color: #fff;}
+main .now_td .content > .inner > ul > li > a > * {display: block;}
+main .now_td .content > .inner > ul > li > a > img{vertical-align: top;}
+main .now_td .content > .inner > ul > li > a > strong{
+	position: absolute; 
+	bottom: 28px; 
+	left: 10px;  
+	font-size: 1.5rem;
+
+ }
+main .now_td .content > .inner > ul > li > a > span{
+	position: absolute;
+	bottom: 8px; 
+	left: 8px; 
+	font-size: 1.1rem;
+	color: rgba(255,255,255,.8);
+}
+main .now_td .content > .inner > ul > li > a > .now_td_sub_span {left:10px; bottom: 10px;} 
+main .now_td .content > .inner > ul > li > a > .time_sale {
+	background: rgba(132,91,237,.9);
+	min-width: 23px;
+	max-width: 100%;
+	height: 23px;
+	top: 0;
+	left: 0;
+	padding: 0 7px;
+	vertical-align: middle;
+	font-size: 13px;
+}
+main .now_td .nowtd_more{text-align: center; padding: 3px 0 15px; width: 100%;}
+main .now_td .nowtd_more a {
+	max-width: 100%;
+	font-size: 1.2rem;
+	line-height: 40px;
+	color: white;
+	border-radius: 24px;
+	background: #7a51e3;
+	padding: 0 30px;
+	margin-bottom: 8px;
+	display: inline-block;
+	letter-spacing: -1px;
+}
+main .now_td .nowtd_more i {font-size: 1.2rem; display: block;}
+
+main .hot_dil { background: white;
+	padding: 0 13px 2px 14px;
+	margin-bottom: 10px;
+	clear: both;}
+main .hot_dil > h3 {padding: 15px 13px 13px 0; overflow: hidden; font-size: 1.5rem; line-height: 1.8rem;}
+main .hot_dil > h3 > a >  strong {
+	border-right: 1px solid #e3e3e3;
+	padding-right: 7px;
+	margin-right: 7px;
+	font-weight: 700
+}
+main .hot_dil > h3 > a > em {color:#666; font-weight: 500}
+main .hot_dil > h3 > a > img {float: right; }
+main .hot_dil > ul{}
+main .hot_dil > div > div > ul > li {width: 33%; margin-bottom: 14px;}
+main .hot_dil > div > div > ul > li > a > * {display: block;}
+main .hot_dil > div > div > ul > li > a > img {margin-bottom: 5px;}
+main .hot_dil > div > div > ul > li > a > strong {color: red;}
+
+main .go_trendfan {
+	background: #ffffff;
+	padding: 16px 15px 15px;
+	font-size: 1.3rem;
+	line-height: 19px;
+	text-align: left;
+	margin:20px 0 10px;
+}
+
+main .tdpick {
+	background: white;
+	padding: 0 13px 2px 14px;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top:10px;
+}
+main .tdpick > h3 {padding: 15px 13px 13px 0; overflow: hidden; font-size: 1.5rem; line-height: 1.8rem;}
+main .tdpick > h3 > a > strong {
+	border-right: 1px solid #e3e3e3;
+	padding-right: 7px;
+	margin-right: 7px;
+	font-weight: 700
+}
+main .tdpick > h3 > a > em {color:#666; font-weight: 500}
+main .tdpick > h3 > a > img {float: right;}
+main .tdpick > div > div > ul {}
+main .tdpick > div > div > ul > li {width: 33%;padding-bottom: 14px;}
+main .tdpick > div > div > ul li:nth-child(3n+1) {margin-left: 0}
+main .tdpick > div > div > ul > li > a > *{display: block;}
+main .tdpick > div > div > ul > li > a > img {float: left; width: 100%; margin-bottom: 5px;}
+
+
+
+main .myregular > a > img {width: 100%; margin:10px 0;}
+
+/* main end */
+
+/* footer start */
+
+footer {clear: both;}
+footer > .fixed_footer {text-align: center;  padding: 13px 0 21px; }
+footer > .fixed_footer * {display: inline-block;}
+footer > .fixed_footer > .footer_service {clear: both; padding-bottom:8px; text-align: center; width: 100%;}
+footer > .fixed_footer > .footer_service > ul > li {
+	font-size: 14px;
+	line-height: 27px;
+	padding: 0 10px;
+	vertical-align: top;
+	letter-spacing: -1px;
+}
+footer > .fixed_footer > .footer_info{width: 100%;}
+footer > .fixed_footer > .footer_info > ul > li > a{
+	display: inline-block;
+	padding: 0 8px;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 20px;
+	color: #868b96;
+	vertical-align: top;
+}
+footer > .fixed_footer > .footer_info > ul > li::after {
+	content: '';
+	border-right: 1px solid #e3e7ee;
+	font-size: 0.8rem;
+	vertical-align: top;
+}
+footer > .fixed_footer > .footer_info > ul > li:last-child::after{display: none;}
+/* footer end */
+/* naver shopping end */
+
+
+/* naver main start */
+.navermain {
+	padding: 0 35px;
+	position: relative;
+	font-size: 19px;
+	line-height: 21px;
+	font-weight: 500;
+	color: #000;
+}
+.navermain > header > .sch {
+	visibility: hidden;
+}
+.navermain > header > .scroll_nav {
+	visibility: hidden;
+}
+.navermain > header > .sch.on{
+	transition: all 0.5s ease;
+	visibility: visible;
+}
+.navermain > header > .scroll_nav.on{
+	transition: all 0.5s ease 0.3s;
+	visibility: visible;
+}
+
+.navermain > .home_header {max-width: 568px; margin: 0 auto;}
+.navermain > .naver_home {max-width: 568px; margin: 0 auto;}
+
+
+
+
+/* 420이하 */
+@media screen and (max-width:638px) {
+
+  
+}
+/* 420 이하 끝 */
+
+
+/* 421이상 768이하 */
+@media screen and (min-width:639px) and (max-width: 769px) {
+	main{overflow: hidden;}
+	.halfmodule_left {width: 50%;
+		float: left; 
+		box-sizing: border-box;
+		clear: both;
+		margin-left: -2px;
+		padding: 0 0 0 1px;
+	} 
+	.halfmodule_right {width: 50%; float: right; box-sizing: border-box;}
+	main .now_td{margin-top: 0;}
+}
+
+/* 421이상 768이하 끝 */
+
+/* 769 이상 시작 */
+@media screen and (min-width:769px) {
+	main{overflow: hidden;}
+	.halfmodule_left {width: 50%;
+		float: left; 
+		box-sizing: border-box;
+		clear: both;
+		margin-left: -1px;
+		padding: 0 0 0 1px;
+	} 
+	.halfmodule_right {width: 50%; float: right; box-sizing: border-box;}
+	main .now_td{margin-top: 0;}
+}
+
+/* 769 이상 끝 */
