@@ -1,6 +1,7 @@
 html {max-width: 100vw; }
 body {
-	font:normal 16px "나눔고딕", nanumGothic, "돋움", dotum, Arial, Verdana, sans-serif;
+    font: 16px "DaimlerCS-Light",Helvetica,Arial,sans-serif;
+    font-weight: 100;
 	line-height:1.7;
 	color:#666666;
 	background-color:#fff;
@@ -29,7 +30,7 @@ a {text-decoration: none; color: white;}
     max-width: 1680px;
     margin:0 auto;
     background: black; 
-    color: white; 
+    color: rgb(255, 255, 255);
     position: relative;
     box-sizing:border-box
 }
@@ -66,32 +67,34 @@ header .nav_cover {
     margin:0 auto;
     overflow: hidden;
 }
-header .nav_cover > h1 {top: 20.370370%; left: 0; margin-top: 1%;} /* 22/108*100 */ 
-header .nav_cover > h1 > .logos {width: 257px; height: 64px; overflow: hidden;}
-header .nav_cover > h1 > .logos > a.svg_logo {padding-right: 64px; width: 64px; height: 64px;}
-header .nav_cover > h1 > .logos > a.logo_word{float: right; padding-top:40px; padding-right: 4px}
+header .nav_cover > .btn {display: none;}
+header .nav_cover > h1 {position: absolute; } /* 22/108*100 */ 
+header .nav_cover > h1 > .logos { overflow: hidden; width: 257px; height: 64px; margin: 16px 0 16px -11px; }
+header .nav_cover > h1 > .logos > a.svg_logo {padding-right: 64px;}
+header .nav_cover > h1 > .logos > a.logo_word{float: right; padding: 40px 4px 4px 0; line-height: 1.25; font-weight: 100;}
 
 header .nav_cover > nav {
     position: absolute; 
     top: 65px; /* 65/108*100*/
-    right: 24px;
-    width: 100%; /* 493.03 / 1352 * 100 */
+    left: 0;
+    width: 100%;
     overflow: hidden;
     height: 41px;
 }
 header .nav_cover > nav > ul { 
     line-height: 1.25;
     float: right;
-
+    width: 64.005602%; /* 443.483/714*100 */
+    text-align: right;
+    font-size: 0;
 }
-header .nav_cover > nav > ul > li {margin: 0 20px;} /* 25 / 1352 * 100 */
+header .nav_cover > nav > ul > li {margin: 0 20px; display: inline-block; float: none; font-size: 16px;} /* 25 / 1352 * 100 */
 header .nav_cover > nav > ul > li:last-child::after{margin: 0 24px; content: ''; border-left: 1px solid rgba(255,255,255,0.22); height: 20px;}
 header .nav_cover > nav > ul > li > a:hover {color: #00abed;}
 header .nav_cover > .privercy {
-    position: absolute;
-    top: 8px; /* 8/108*100 */ 
-    right: 44px; /* 164 /1680 * 100 */
     font-size: 0.75rem;
+    float: right;
+    margin-top: 6px;
 }
 
 header .nav_cover > .privercy em{
@@ -154,7 +157,7 @@ header .nav_cover > .privercy em:hover{color: #00abed; border-color: #00abed }
 main {color: #333333; width: 100%; overflow: hidden; box-sizing: border-box;  margin-top: -108px} 
 main a{color: #333333;}
 main .main_pt {height:700px; position: relative;} /* 431.667/1024*100 */ 
-main .main_pt .flow {}
+main .main_pt .flow {width: 100%;}
 main .main_pt .flow > li {position: relative; }
 main .main_pt .flow > li > a {color: white; }
 main .main_pt .flow > li > a > img {width: 100%; height: 700px;}
@@ -182,9 +185,9 @@ main .main_pt > .slide_bar > li {margin: 0 5px; padding: 17px 0 15px; width: 60p
 main .main_pt > .slide_bar > li::after { background: white; width: 100%; height: 3px; display: block; content: ''; }
 main .main_pt > .slide_bar > li::after.on{background: #00abed;}
 
-main .model_overview_cover {background-color: white; height: 460.367px; padding-bottom: 50px;}  /* 460 / 1940 * 100 */
+main .model_overview_cover {background-color: white; height: auto; padding-bottom: 50px; clear: both; }  /* 460 / 1940 * 100 */
 main .model_overview {
-    width: 1352px;
+    width: 80.476190%;
     max-width: 1680px; 
     /*padding: 2.422680% 9.761904% 3.814432%; /*47/1940*100 / 165/1680*100 */ /* 74/1940*100 */
     box-sizing: border-box;
@@ -192,13 +195,15 @@ main .model_overview {
     padding: 0 44px;
     margin:0 auto;
 } 
-main .model_overview > h3 {font-size: 2em; line-height: 40px; padding-bottom: 2.061855%; padding-top: 0.85167em;} /* 40/1940*100*/
+main .model_overview > h3 {font-size: 1.875rem; line-height: 1; padding: 44px 0 40px;} /* 40/1940*100*/
 main .model_overview a:hover {color: #00abed;}
-main .model_overview .model_menu {margin-bottom: 4.278350%; } /* 83/1940*100*/
-main .model_overview .model_menu > li {font-size: 1.375rem}
+main .model_overview .model_menu {} /* 83/1940*100*/
+main .model_overview .model_menu > li {font-size: 1.25rem;}
 main .model_overview .model_menu > li::after {border-right: 1px solid black; content:''; vertical-align: top;}
 main .model_overview .model_menu > li:last-child::after {border-right: none;}
 main .model_overview .model_menu > li > a {padding:0 21px;}
+main .model_overview .model_menu > li:first-child > a{padding: 0 21px 0 0}
+main .model_overview .model_photo {padding: 40px 0 0}
 main .model_overview .model_photo > ul > li {width: 223px } /* 202/1352*100 */ 
 main .model_overview .model_photo > ul > li + li {margin-left: 4.733727%;} /* 64/1352/100*/
 main .model_overview .model_photo > ul > li > a > img {margin-bottom:40px; width: 100%; height: 113.63px;}
@@ -219,7 +224,7 @@ aside {
 } /* 193 /1940 *100 */
 aside > .aside_cover {
     height: 193px;
-    width: 1352px;
+    width: 80.476190%;
     max-width: 1680px; 
     margin: 0 auto;
 }
@@ -227,7 +232,7 @@ aside > .aside_cover > ul { padding:0 44px; box-sizing: border-box;} /* 100/1940
 aside > .aside_cover > ul > li { 
     background: linear-gradient(180deg,#262626,#171717 280px);
     width: 19.008875%; /* 257 / 1352 *100 */
-    height: 68.911917%; /* 133 / 193 *100 */
+    height: 133px; /* 133 / 193 *100 */
 }   
 aside > .aside_cover > ul > li +li {margin-left: 1.183431% } /* 16 /1352 * 100 */
 aside > .aside_cover > ul > li > a {
@@ -237,17 +242,18 @@ aside > .aside_cover > ul > li > a {
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
 } 
 aside > .aside_cover > ul > li > a:hover {background: #171717;}
 aside > .aside_cover > ul > li > a > * {display: block;}
 aside > .aside_cover > ul > li > a > svg {
     vertical-align: bottom;
-    margin-bottom: 9.215017%;/* 27/133*100 */ 
+    margin-bottom: 27px; 
     width: 70px; 
     height: 60px;
 } 
-aside ul > li > a > ul > li {position: absolute; bottom: 5.802047%; right: 5.836575%;}
-aside ul > li > a > ul > li:hover {color:#00abed;}
+aside ul > li > a > i {float: right;}
+aside ul > li > a > i:hover {color:#00abed;}
 /* aside end */
 
 /* footer start */
@@ -289,13 +295,13 @@ footer .ft_top ul > li > ul > li + li {margin-top: 4.728845%;} /* 21/444.083*100
 
 footer .ft_bottom_cover{background: black; clear: both;}
 footer .ft_bottom {
-    width: 80.476190%; 
+    width: 80.476190%;
     max-width: 1680px; 
     margin: 0 auto; 
     padding: 0 44px;
     box-sizing: border-box;
 } 
-footer .ft_bottom > div{ padding: 14px 0 91px; text-align: right; }
+footer .ft_bottom > div{ padding: 14px 0 91px; text-align: right;}
 footer .ft_bottom > div > ul {display: inline-block; font-size: 0.75rem; line-height: 1.28571; }
 footer .ft_bottom > div > ul > li {}
 footer .ft_bottom > div > ul > li::after{content: '|'; margin: 0 10px; color: #999999;}
@@ -307,7 +313,6 @@ footer .sticky{
 	top: 50%;
     right: 0;
 }
-footer .sticky {}
 footer .sticky > ul > li {
     position: relative;
     float: none; 
@@ -325,7 +330,7 @@ footer .sticky > ul > li + li {margin-top: 1px;}
 footer .sticky > ul > li > a {width: 100%; overflow: hidden; text-align: center}
 footer .sticky > ul > li > a:hover {color: white}
 footer .sticky > ul > li > a > svg {width: 30px; height: 30px; float: left; padding:7.5px 0 0 7.5px;}
-footer .sticky > ul > li > a > svg > path{}
+/* footer .sticky > ul > li > a > svg > path{} */
 footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
 
 /* footer end */ 
@@ -334,19 +339,106 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
 /* 479이하 */
 @media screen and (max-width:479px) {
     body {font-size: 12px;}
-    header ul {display: none;}
-    header .nav_cover > h1 > a > svg {width: 40px; height: 40px;}
-    header .nav_cover > .privercy {right:-8%;}
-    header .nav_cover > .privercy span {visibility: hidden; height: 0;}
-    main .model_overview .model_photo {display: none;} 
+    header {height: 76px;}
+    header .nav_cover > .btn  {float: right; display:block; margin: 50px 0 4px; z-index: 100; width: 0; height:2px; background-color:rgb(212, 212, 212);}
+    header .nav_cover > .btn:before {content: ''; float: right; margin-bottom:4px; display: inline-block; width:20px; height:2px; background-color:rgb(212, 212, 212);}
+    header .nav_cover > .btn:after {content: ''; float: right; margin-top:4px; display: inline-block; width:20px; height:2px; background-color:rgb(212, 212, 212);}
+    header .nav_cover > h1 > .logos {width: 179px; height: 40px; margin: 22px 0 14px -30px;} 
+    header .nav_cover > h1 > .logos > a.svg_logo{ padding-right: 0;}
+    header .nav_cover > h1 > .logos > a.svg_logo > svg{ width: 40px; height: 40px;}
+    header .nav_cover > h1 > .logos > a.logo_word{float: right; padding: 21px 0 4px; line-height: 1.25; font-weight: 100;}
+    header .nav_cover > nav {display: none;}
+    header .nav_cover > .privercy span {display: none; height: 0;}
+    main {margin-top: 0;}
+    main .main_pt {height: auto;}
     main .main_pt .flow > li > a > img {width: 100%; height: 282px}
-    main .main_pt .flow > li > a > strong {display: none;}
-    main .main_pt .flow > li > a > span {display: none;}
+    main .main_pt .flow > li > a > strong {
+        position: unset;
+        font-size: 2em; 
+        top: 0; /* 165 / 700 * 100*/
+        left:0;
+        animation: none;
+        color: #000
+    }
+    main .main_pt .flow > li > a > span {
+        position: unset; 
+        top: 0; /* 230 / 700 * 100 */
+        left:0;
+        animation: none;
+        color: #000
+    }
+    main .model_overview {
+        width: 93.33%;
+        padding: 0 0;
+   
+    } 
+    main .model_overview .model_menu {overflow: hidden;};
+    main .model_overview .model_menu > li {float: none;}
+    main .model_overview .model_photo {display: none;}
+    aside > .aside_cover { width: 93.33%}
+    aside > .aside_cover > ul{padding:0 0;}
     aside > .aside_cover > ul > li {
         float: none; 
         width: 100%; 
         height: 100%; 
-        background: linear-gradient(180deg,#262626,#171717 20px);
+        background: linear-gradient(180deg,#262626,#171717 280px);
+    }
+    aside > .aside_cover > ul > li + li {margin: 2px 0 0 0;}
+    aside > .aside_cover > ul > li > a {height: 100% ; width: 100%;}
+    aside > .aside_cover > ul > li > a > * {display: inline-block;}
+    aside > .aside_cover > ul > li > a > svg {height: 34px; width: 31px; margin-bottom: 0;}
+    footer .ft_top {width: 93.33%; padding: 0 0;}
+    footer .ft_top .carn_top {border-top: 2px solid #494949}
+    footer .ft_top > h4 {display: none;}
+    footer .ft_top .Social {margin:0 0; padding: 30px 9px; border-bottom: 2px solid #494949;}
+    footer .ft_top .Social > li {width: 33%}
+    footer .ft_top .Social > li + li {margin: 0;}
+    footer .ft_top .car_info {display: none;}
+    footer .ft_bottom {padding: 0; width: 93.33%}
+    footer .ft_bottom > div{ text-align: left; }
+    footer .ft_bottom > div > ul {padding: 0.927835% 0 0.927835% 0;}
+    footer .ft_bottom > div > ul > li {padding: 0 0 0 8px ;}
+    footer .ft_bottom > div > ul > li::after{content: ''; border-right: 1px solid #999999; padding:0 5px;}
+    footer .sticky {bottom: 0; top: auto; left: 0;}
+    footer .sticky > ul > li {
+        position: relative;
+        background: #262626; 
+        transform: none;
+        height: 40px;
+        max-height: 67px;
+        width: 33%;
+        text-align: center;
+        padding: 10px 0;
+        float:left;
+    }
+    footer .sticky > ul > li:hover {background: #262626;}
+    footer .sticky > ul > li + li {margin: 0 0 0 1px}
+    footer .sticky > ul > li > a > svg {width: 25px; height: 25px; float: none; padding: 0 0; vertical-align: top; margin-bottom: 5px; }
+    footer .sticky > ul > li > a > div {line-height: 1; font-size: 10px}
+}
+
+/* 479 이하 끝 */
+
+
+/* 480 이상 시작 */
+
+@media screen and (min-width:480px) and (max-width: 767px) {
+    body {font-size: 12px;}
+    header ul {display: none;}
+    header .nav_cover > .btn  {float: right; display:block; margin: 50px 0 4px; z-index: 100; width: 0; height:2px; background-color:rgb(212, 212, 212);}
+    header .nav_cover > .btn:before {content: ''; float: right; margin-bottom:4px; display: inline-block; width:20px; height:2px; background-color:rgb(212, 212, 212);}
+    header .nav_cover > .btn:after {content: ''; float: right; margin-top:4px; display: inline-block; width:20px; height:2px; background-color:rgb(212, 212, 212);}
+    header .nav_cover > h1 > a > svg {width: 40px; height: 40px;}
+    header .nav_cover > .privercy span {display: none; height: 0;}
+    main .main_pt .flow > li > a > img {width: 100%; height: 282px}
+    main .main_pt .flow > li > a > strong {display: none;}
+    main .main_pt .flow > li > a > span {display: none;}
+    main .model_overview .model_photo {display: none;} 
+    aside > .aside_cover > ul > li {
+        float: none; 
+        width: 100%; 
+        height: 100%; 
+        background: linear-gradient(180deg,#262626,#171717 280px);
     }
     aside > .aside_cover > ul > li + li {margin: 2px 0 0 0;}
     aside > .aside_cover > ul > li > a {height: 100% ; width: 100%;}
@@ -355,21 +447,32 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
     footer .ft_top .carn_top {border-top: 2px solid #494949}
     footer .ft_top > h4 {display: none;}
     footer .ft_top .Social {margin:0 0; padding: 30px 9px; border-bottom: 2px solid #494949;}
+    footer .ft_top .Social > li {width: 33%}
+    footer .ft_top .Social > li + li {margin: 0;}
     footer .ft_top .car_info {display: none;}
-    footer .ft_bottom > ul {padding: 0.927835% 0 0.927835% 0;}
-    footer .ft_bottom > ul > li {padding: 0 0 0 8px ;}
-    footer .ft_bottom > ul > li::after{content: ''; border-right: 1px solid #999999; padding:0 8px;}
-    footer .sticky {display: none;}
+    footer .ft_bottom {padding: 0; width: 93.33%}
+    footer .ft_bottom > div{ text-align: left; }
+    footer .ft_bottom > div > ul {padding: 0.927835% 0 0.927835% 0;}
+    footer .ft_bottom > div > ul > li {padding: 0 0 0 8px ;}
+    footer .ft_bottom > div > ul > li::after{content: ''; border-right: 1px solid #999999; padding:0 5px;}
+    footer .sticky {bottom: 0; top: auto; left: 0;}
+    footer .sticky > ul > li {
+        position: relative;
+        background: #262626; 
+        transform: none;
+        height: 40px;
+        max-height: 67px;
+        width: 33%;
+        text-align: center;
+        padding: 10px 0;
+        float:left;
+    }
+    footer .sticky > ul > li:hover {background: #262626;}
+    footer .sticky > ul > li + li {margin: 0 0 0 1px}
+    footer .sticky > ul > li > a > svg {width: 25px; height: 25px; float: none; padding: 0 0; vertical-align: top; margin-bottom: 5px; }
+    footer .sticky > ul > li > a > div {line-height: 1; font-size: 10px}
 }
-/* 479 이하 끝 */
 
-
-/* 480 이상 시작 */
-
-@media screen and (min-width:480px) and (max-width: 767px) {
-
-
-}
 
 /* 767 이상 끝 */
 
@@ -384,6 +487,7 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
     header ul {width:100%; right:-50% }
     header ul li:last-child {border-right:none;}   
     header .nav_cover {margin: 0 0; padding: 0 27px; width: 714px;}  
+    header .nav_cover > nav {top: 57px; width: 100%; }
     header .nav_cover > nav > ul > li:last-child::after{display: none;}
     header .nav_cover > .privercy {right:0;}
     header .nav_cover > .privercy span {display: none; height: 0;}
@@ -395,13 +499,20 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
     aside > .aside_cover {margin: 0 0; padding: 0 27px; width: 714px;}
     aside > .aside_cover > ul {padding: 0 0;}
     aside > .aside_cover > ul > li > a {font-size: 14px;}
-    aside > .aside_cover > ul > li > a > ul > li {display: none;}
+    aside > .aside_cover > ul > li > a > i {display: none;}
     aside > .aside_cover > ul > li > a > svg {height: 46px; width: 46px;}
     footer .ft_top {margin: 0 0; padding: 0 27px; width: 714px}
-    footer .ft_top .car_info > li {width: 30%;}
+    footer .ft_top .car_info > li {width: 30%; }
     footer .ft_top .car_info > li:last-child{margin-left: 0;}
+    footer .ft_top .car_info > li {line-height: 1.25;}
     footer .ft_bottom{margin: 0 0; width: 100%; padding: 0 27px;}
-    footer .ft_bottom > ul {padding: 0.927835% 0 0.927835%; }
+    footer .ft_bottom > div{ padding: 14px 0; text-align: right; }
+    footer .ft_bottom > div > ul {padding: 0.927835% 0 0.927835%; }
+    footer .sticky > ul > li:hover{
+        transition: none;
+        transform: translate(70px,0);
+        background-color:#0e78a0 ;
+    }
     footer .sticky > ul > li > a {width: 100%; padding: 0 10%;}
     
 }

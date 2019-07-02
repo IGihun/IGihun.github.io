@@ -1,7 +1,6 @@
 
 
 window.onload = function(){
-
 	var navMenu = document.querySelector(".nav_menucover");
 	var modelbtn = document.querySelector(".model_btn");
 		modelbtn.addEventListener("click", function(e){
@@ -13,6 +12,4 @@ window.onload = function(){
 			navMenu.classList.remove("on");
 		}
 	})
-	// var flowWord = document.querySelector(".flow");
-	// var strong = flowWord.querySelector
 }
