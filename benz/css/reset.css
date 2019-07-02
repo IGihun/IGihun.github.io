@@ -70,8 +70,9 @@ header .nav_cover {
 header .nav_cover > .btn {display: none;}
 header .nav_cover > h1 {position: absolute; } /* 22/108*100 */ 
 header .nav_cover > h1 > .logos { overflow: hidden; width: 257px; height: 64px; margin: 16px 0 16px -11px; }
-header .nav_cover > h1 > .logos > a.svg_logo {padding-right: 64px;}
-header .nav_cover > h1 > .logos > a.logo_word{float: right; padding: 40px 4px 4px 0; line-height: 1.25; font-weight: 100;}
+header .nav_cover > h1 > .logos > a.svg_logo {margin-right: 64px; width: 64px; height: 64px; float: left;}
+header .nav_cover > h1 > .logos > a.svg_logo > svg {width: 100%; height: 100%;}
+header .nav_cover > h1 > .logos > a.logo_word {margin: 40px 0 0; line-height: 1.25; font-weight: 100; float: right; padding:  0 4px 4px 0}
 
 header .nav_cover > nav {
     position: absolute; 
@@ -195,7 +196,7 @@ main .model_overview {
     padding: 0 44px;
     margin:0 auto;
 } 
-main .model_overview > h3 {font-size: 1.875rem; line-height: 1; padding: 44px 0 40px;} /* 40/1940*100*/
+main .model_overview > h3 {font-size: 1.875rem; line-height: 1; padding: 44px 0 40px; font-weight: 100;} /* 40/1940*100*/
 main .model_overview a:hover {color: #00abed;}
 main .model_overview .model_menu {} /* 83/1940*100*/
 main .model_overview .model_menu > li {font-size: 1.25rem;}
@@ -223,10 +224,9 @@ aside {
     clear: both; 
 } /* 193 /1940 *100 */
 aside > .aside_cover {
-    height: 193px;
     width: 80.476190%;
     max-width: 1680px; 
-    margin: 0 auto;
+    margin: 0 auto 60px;
 }
 aside > .aside_cover > ul { padding:0 44px; box-sizing: border-box;} /* 100/1940*100 / 60/1940*100 */
 aside > .aside_cover > ul > li { 
@@ -270,6 +270,7 @@ footer .ft_top {
     padding:0 44px; 
     margin: 0 auto;
 }
+footer .ft_top .hpmode_top{display: none; font-size: 32px; padding: 14px 0 25px; text-align: center; line-height: 1; }
 footer .ft_top .carn_top {
     border-bottom: 2px solid #494949;
     padding: 1.443298% 0;  /* 28/1940*100 */
@@ -344,10 +345,10 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
     header .nav_cover > .btn:before {content: ''; float: right; margin-bottom:4px; display: inline-block; width:20px; height:2px; background-color:rgb(212, 212, 212);}
     header .nav_cover > .btn:after {content: ''; float: right; margin-top:4px; display: inline-block; width:20px; height:2px; background-color:rgb(212, 212, 212);}
     header .nav_cover > h1 > .logos {width: 179px; height: 40px; margin: 22px 0 14px -30px;} 
-    header .nav_cover > h1 > .logos > a.svg_logo{ padding-right: 0;}
-    header .nav_cover > h1 > .logos > a.svg_logo > svg{ width: 40px; height: 40px;}
-    header .nav_cover > h1 > .logos > a.logo_word{float: right; padding: 21px 0 4px; line-height: 1.25; font-weight: 100;}
+    header .nav_cover > h1 > .logos > a.svg_logo{ margin-right: 0;  width: 40px; height: 40px;}
+    header .nav_cover > h1 > .logos > a.logo_word{margin: 21px 0 4px; line-height: 1.25; font-weight: 100;}
     header .nav_cover > nav {display: none;}
+    header .nav_cover > .privercy em {border: 1px solid white}
     header .nav_cover > .privercy span {display: none; height: 0;}
     main {margin-top: 0;}
     main .main_pt {height: auto;}
@@ -358,40 +359,45 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
         top: 0; /* 165 / 700 * 100*/
         left:0;
         animation: none;
-        color: #000
+        color: #000;
+        margin-left: 17px;
     }
     main .main_pt .flow > li > a > span {
         position: unset; 
         top: 0; /* 230 / 700 * 100 */
         left:0;
         animation: none;
-        color: #000
+        color: #000;
+        margin-left: 17px;
     }
     main .model_overview {
         width: 93.33%;
         padding: 0 0;
-   
     } 
-    main .model_overview .model_menu {overflow: hidden;};
-    main .model_overview .model_menu > li {float: none;}
+    main .model_overview .model_menu {overflow: hidden; width: 1000px;};
+    main .model_overview .model_menu > li {float: none; display: inline-block;}
     main .model_overview .model_photo {display: none;}
-    aside > .aside_cover { width: 93.33%}
+    main .main_bottom {margin-bottom: 40px;}
+    aside > .aside_cover { width: 93.33%; margin: 0 auto 20px;}
     aside > .aside_cover > ul{padding:0 0;}
     aside > .aside_cover > ul > li {
-        float: none; 
         width: 100%; 
         height: 100%; 
-        background: linear-gradient(180deg,#262626,#171717 280px);
+        background: linear-gradient(180deg,#333,#242424);
     }
     aside > .aside_cover > ul > li + li {margin: 2px 0 0 0;}
-    aside > .aside_cover > ul > li > a {height: 100% ; width: 100%;}
+    aside > .aside_cover > ul > li > a {height: 100% ; width: 100%; font-size: 16px;}
     aside > .aside_cover > ul > li > a > * {display: inline-block;}
     aside > .aside_cover > ul > li > a > svg {height: 34px; width: 31px; margin-bottom: 0;}
-    footer .ft_top {width: 93.33%; padding: 0 0;}
-    footer .ft_top .carn_top {border-top: 2px solid #494949}
+    footer .ft_top {width: 93.33%; padding: 0 0; font-size: 1rem}
+    footer .ft_top .hpmode_top{display: block;}
+    footer .ft_top .carn_top {border-top: 1px solid #494949; border-bottom: 1px solid #494949; padding: 14px 0 25px; margin: 0;}
+    footer .ft_top .carn_top > div > .top_going {display: none;}
     footer .ft_top > h4 {display: none;}
-    footer .ft_top .Social {margin:0 0; padding: 30px 9px; border-bottom: 2px solid #494949;}
-    footer .ft_top .Social > li {width: 33%}
+    footer .ft_top .Social {margin:0 0; padding: 30px 9px; border-bottom: 1px solid #494949;}
+    footer .ft_top .Social > li {width: 33.333333%}
+    footer .ft_top .Social > li.instar {text-align: center;}
+    footer .ft_top .Social > li.utube {text-align: right;}
     footer .ft_top .Social > li + li {margin: 0;}
     footer .ft_top .car_info {display: none;}
     footer .ft_bottom {padding: 0; width: 93.33%}
@@ -402,7 +408,7 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
     footer .sticky {bottom: 0; top: auto; left: 0;}
     footer .sticky > ul > li {
         position: relative;
-        background: #262626; 
+        background: linear-gradient(180deg,#333,#242424);
         transform: none;
         height: 40px;
         max-height: 67px;
@@ -441,8 +447,8 @@ footer .sticky > ul > li > a > div {line-height: 45px; font-size: 0.9rem}
         background: linear-gradient(180deg,#262626,#171717 280px);
     }
     aside > .aside_cover > ul > li + li {margin: 2px 0 0 0;}
-    aside > .aside_cover > ul > li > a {height: 100% ; width: 100%;}
-    aside > .aside_cover > ul > li > a > * {display: inline-block;}
+    aside > .aside_cover > ul > li > a {height: 100% ; width: 100%; }
+    aside > .aside_cover > ul > li > a > * {display: inline-block; }
     aside > .aside_cover > ul > li > a > svg {height: 34px; width: 31px; margin-bottom: 0;}
     footer .ft_top .carn_top {border-top: 2px solid #494949}
     footer .ft_top > h4 {display: none;}
